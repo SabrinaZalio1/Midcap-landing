@@ -10,7 +10,26 @@
     min-height: 100vh;
 }
 
-/* header styles */
+.white-space {
+    background-color: #fff;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.white-space-title {
+    font-size: 30px;
+    font-weight: 200;
+    width: 55%;
+    margin: 0 auto;
+}
+
+/* header  */
 .header-mb-container {
     display: flex;
     justify-content: space-between;
@@ -22,7 +41,14 @@
 }
 
 .header {
-    position: relative;
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header-background {
+    background-color: #fff;
 }
 
 .search-icon,
@@ -134,7 +160,6 @@
 }
 
 .header-menu-options {
-    /* display: flex; */
     display: none;
     background-color: #EDF3F5;
     width: 100%;
@@ -280,7 +305,7 @@ li:hover .dropdown-menu {
     color: #21409a !important;
 }
 
-/* end header styles */
+/* end header */
 
 
 /* hero */
@@ -692,6 +717,18 @@ li:hover .dropdown-menu {
 
 
 /* footer  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    min-height: 100vh;
+}
+
+/* footer  */
 .footer {
     width: 100%;
     max-height: 100%;
@@ -699,6 +736,7 @@ li:hover .dropdown-menu {
     background-color: #304252;
     padding: 20px 40px;
     color: #fff;
+    font-weight: 200;
 }
 
 .footer-links-title {
@@ -725,30 +763,53 @@ li:hover .dropdown-menu {
     margin-bottom: 40px;
 }
 
-.copyright-section {
+.copyright-dt-section {
     font-size: 14px;
+    display: none;
 }
 
-.copyright-section a {
+.copyright-mb-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-dt-section a {
     color: #fff;
     transition: all 0.2s ease;
 }
 
 
 @media screen and (min-width: 992px) {
+
+    .copyright-dt-section {
+        display: flex;
+    }
+
+    .copyright-mb-section {
+        display: none;
+    }
+
     .footer {
         height: 585px;
     }
 }
 
-/* falta arreglar icono de linkedin, espacios en mobile  */
+.copyright-mb-link {
+    color: #fff;
+    font-size: 14px;
+}
 
+.copyright-mb-link:hover {
+    color: #fff;
+    text-decoration: none;
 
+}
 
 .copyright-link {
     display: inline-block;
     position: relative;
     text-decoration: none !important;
+    padding: 0 5px;
 }
 
 .copyright-link:after {
@@ -766,6 +827,17 @@ li:hover .dropdown-menu {
 
 .copyright-link:hover:after {
     transform: scaleX(1);
+}
+
+.linkedin-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.2s ease-out;
+}
+
+.linkedin-icon:hover {
+    color: #46D3A4;
+    transition: all 0.2s ease-out;
 }
 
 /* end footer */

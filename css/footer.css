@@ -17,6 +17,7 @@
     background-color: #304252;
     padding: 20px 40px;
     color: #fff;
+    font-weight: 200;
 }
 
 .footer-links-title {
@@ -43,30 +44,53 @@
     margin-bottom: 40px;
 }
 
-.copyright-section {
+.copyright-dt-section {
     font-size: 14px;
+    display: none;
 }
 
-.copyright-section a {
+.copyright-mb-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-dt-section a {
     color: #fff;
     transition: all 0.2s ease;
 }
 
 
 @media screen and (min-width: 992px) {
+
+    .copyright-dt-section {
+        display: flex;
+    }
+
+    .copyright-mb-section {
+        display: none;
+    }
+
     .footer {
         height: 585px;
     }
 }
 
-/* falta arreglar icono de linkedin, espacios en mobile  */
+.copyright-mb-link {
+    color: #fff;
+    font-size: 14px;
+}
 
+.copyright-mb-link:hover {
+    color: #fff;
+    text-decoration: none;
 
+}
 
 .copyright-link {
     display: inline-block;
     position: relative;
     text-decoration: none !important;
+    padding: 0 5px;
 }
 
 .copyright-link:after {
@@ -84,4 +108,15 @@
 
 .copyright-link:hover:after {
     transform: scaleX(1);
+}
+
+.linkedin-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.2s ease-out;
+}
+
+.linkedin-icon:hover {
+    color: #46D3A4;
+    transition: all 0.2s ease-out;
 }

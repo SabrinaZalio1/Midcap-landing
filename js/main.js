@@ -14,8 +14,16 @@ $(document).ready(function () {
 
     $(".menu-icon").click(function () {
         $(".menu-mb-container").toggle("slide");
-        // $('.menu-mb-container').addClass('d-block')
     });
+
+
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 300) {
+            $(".header").addClass("header-background");
+        }
+    });
+
     // end header
 
     // hero
