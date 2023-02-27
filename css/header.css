@@ -41,6 +41,7 @@
     position: absolute;
     top: 45px;
     padding-top: 6px;
+    z-index: 999;
 }
 
 .header-searchbar {
@@ -258,7 +259,7 @@ li:hover .dropdown-menu {
     height: calc(100vh - 31px);
     position: absolute;
     top: 50px;
-    z-index: 999;
+    z-index: 900;
     height: 100%;
 
 }
