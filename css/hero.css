@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    min-height: 100vh;
+}
+
+/* hero */
+.hero {
+    width: 100%;
+    height: 510px;
+    background-image: url(../assets/bg-hero-mobile.png);
+    background-size: cover;
+    color: #000;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.hero-header {
+    max-width: 295px;
+    position: absolute;
+    padding: 35px 43px 20px 43px;
+    margin-left: 30px;
+    top: 55px;
+}
+
+.hero-header::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    opacity: .9;
+    width: 23px;
+    height: 23px;
+
+    background-color: #21409A;
+    clip-path: polygon(35% 0, 35% 65%, 100% 65%, 100% 100%, 0 100%, 0 0);
+}
+
+.hero-header::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    opacity: .9;
+    width: 56px;
+    height: 56px;
+    background-color: #08A878;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%, 65% 35%, 0 35%);
+}
+
+.hero-banner {
+    background-color: #304252;
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    padding: 20px 10px;
+    position: absolute;
+    bottom: -285px;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.hero-banner-number {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero-banner-value {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 200;
+    text-decoration: none !important;
+}
+
+.hero-banner-value:hover {
+    color: #fff !important;
+}
+
+.hero-banner-value:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #46D3A4;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+.hero-banner-value:hover:after {
+    transform: scaleX(1);
+}
+
+.hero-arrow-icon {
+    color: #46D3A4;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+@media screen and (min-width: 992px) {
+    .hero {
+        background-image: url(../assets/bg-hero-desktop.png);
+        height: 100vh;
+        background-size: cover;
+    }
+
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .hero-header {
+        max-width: 650px;
+        position: relative;
+        padding: 80px 68px;
+    }
+
+    .hero-header::before {
+        width: 51px;
+        height: 51px;
+    }
+
+    .hero-header::after {
+        width: 105px;
+        height: 105px;
+    }
+
+    .hero-banner {
+        height: 225px;
+    }
+
+    .hero-banner {
+        bottom: -180px;
+        padding: 20px 30px;
+        width: 82%;
+    }
+
+    .hero-banner-number {
+        font-size: 72px;
+    }
+
+}
